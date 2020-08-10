@@ -13,5 +13,9 @@
   <%= @news.body %>
 </p>
 
+<p>
+  <%= image_tag @news.title_image.url(:thumb) if @news.title_image?%>
+</p>
+
 <%= link_to 'Edit', edit_news_path(@news) %> |
 <%= link_to 'Back', news_index_path %>
