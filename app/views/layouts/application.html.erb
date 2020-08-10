@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Master</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <div class="head_conteiner">
+      <ul class="head_ul">
+        <li><a  class="button" href="welcome.html">Головна</a></li>
+        <li><a class="button" href="from_me.html">Меню</a></li>
+        <li><a class="button" href="order.html">Замовлення</a></li>
+        <li><a class="button" href="from_me.html">Про нас</a></li>
+        <li><a class="button" href="partner.html">Партнерство</a></li>
+        <li><a class="button" href="mk.html">Наші майстер класи</a></li>
+        <li><a class="button" href="contacts.html">Контакти</a></li>
+        <li><strong>+38(099) 04 39 538</strong></li>
+      </ul>
+  </div>
+
+
+
+    <%= yield %>
+
+    <footer>
+      <div class="footer">
+        <span class="footer_head">ПЕКАРНЯ</span>
+        <p>Пекарня-кондитерська «Mary» гостинно запрошує скуштувати неймовірно смачну випічку та десерти.</p>
+      </div>
+      <div id="master">
+          <%= image_tag("img/master.jpg") %>
+      </div>
+      <div class="footer">
+        <span class="footer_head">КОНТАКТНА ІНФОРМАЦІЯ</span>
+        <p>
+        бульвар Лесі Українки 26, Київ, Україна
+        +38 073 123 26 26
+        <p></p>
+        <span align="center" class="footer_head">master2009sales@gmail.com</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

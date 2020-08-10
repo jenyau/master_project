@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Заголовок:</strong>
+  <%= @news.title %>
+</p>
+<p>
+  Добавлена:
+  <%= @news.created_at.strftime("%T %D") %>
+</p>
+
+<p>
+  <%= @news.body %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
