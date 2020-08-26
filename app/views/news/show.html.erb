@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Заголовок:</strong>
-  <%= @news.title %>
-</p>
-<p>
+<div class="news">
+  <h4><%= @news.title %></h4>
+
+<p id="created_at">
   Добавлена:
   <%= @news.created_at.strftime("%T %D") %>
 </p>
@@ -13,9 +12,9 @@
   <%= @news.body %>
 </p>
 
-<p>
-  <%= image_tag @news.title_image.url(:thumb) if @news.title_image?%>
-</p>
+<%= image_tag @news.title_image.url(:large) if @news.title_image?%>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
+</div>
+
+<%= link_to 'Edit', edit_admin_news_path(@news) %>
 <%= link_to 'Back', news_index_path %>

@@ -1,0 +1,32 @@
+<div id="header_img">
+  <%= image_tag("img/design55.jpg") %>
+</div>
+    <div id="menu_header_img">
+      <%= image_tag("img/menu_front.jpg") %>
+    </div>
+
+    <% if @product.present? %>
+      <div class="menu">
+        <%= image_tag @product.image.url(:menu_img) if @product.image? %>
+      </div>
+      <div class="menu">
+        <h4><%= link_to "#{ @product.name }", product_path(@product) %></h4>
+        <%= @product.description %>
+      </div>
+    <% end %>
+
+    <% if @products.empty? && !@product.present? %>
+      <div class="menu">Нет результатов по вашему запросу</div>
+    <% else %>
+      <% @products.each do |product| %>
+    <div class="menu">
+        <%= image_tag product.image.url(:menu_img) if product.image? %>
+    </div>
+    <div class="menu">
+        <h4><%= link_to "#{ product.name }", product_path(product) %></h4>
+        <%= product.description %>
+    </div>
+    <% end %>
+  <% end %>
+</p>
+

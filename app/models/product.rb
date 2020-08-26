@@ -2,10 +2,10 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  enum category: {biscuits: 0, puff_product: 1, cake: 2, desert: 3}
+  enum category: ['Печенье', 'Слойка', 'Торт', 'Пирожное']
 
-  scope :desert, -> { where(category: 'desert') }
-  scope :cake, -> { where(category: 'cake') }
-  scope :puff_product, -> { where(category: 'puff_product') }
-  scope :biscuits, -> { where(category: 'biscuits') }
+  scope :desert, -> { where(category: 'Пирожное') }
+  scope :cake, -> { where(category: 'Торт') }
+  scope :puff_product, -> { where(category: 'Слойка') }
+  scope :biscuits, -> { where(category: 'Печенье') }
 end

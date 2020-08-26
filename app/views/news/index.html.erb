@@ -1,21 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div id="header_img">
+<%= image_tag("img/news.png") %>
+</div>
 
-<h1>news</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="news">
+
+  <% if @news.empty? %>
+    <h4>Пока нет новостей</h4>
+  <% else %>
     <%= render @news %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Add news', new_news_path %><br>
-<%= link_to 'Back', news_index_path %>
+  <% end %>
+</div>

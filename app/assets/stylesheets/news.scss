@@ -1,0 +1,32 @@
+.news{
+  width: 80%;
+  font-size: 1.3em;
+}
+.news p{
+  color: red;
+  font-size: 1.5;
+  border-bottom: 2px solid yellow;
+  padding: 5px;
+}
+.news h4{
+  width: 300px;
+  color: red;
+  font-size: 1.4em;
+  border-bottom: 3px solid yellow;
+}
+.news a{
+  color: red;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+#created_at{
+  width: 200px;
+  border: 1px solid red;
+  color: red;
+  font-size: 0.7em;
+  padding: 4px;
+}
+#news_index{
+  white-space: nowrap;
+  overflow: hidden;
+}

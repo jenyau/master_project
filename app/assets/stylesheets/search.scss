@@ -1,0 +1,31 @@
+.search_panel{
+  right: 10px;
+  width: 40%;
+  height: 50px;
+  position: fixed;
+  opacity: .75;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+.search_panel select{
+  float: right;
+  width: 200px;
+  height: 40px;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-size: 1.5em;
+
+  border-radius: 7px;
+}
+
+.search_panel2 input{
+  border-radius: 6px;
+}
+.search_panel2{
+  width: 40%;
+  height: 50px;
+  position: fixed;
+  opacity: .75;
+  margin-top: -20px;
+  margin-left: 10px;
+}

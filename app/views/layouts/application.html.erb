@@ -10,25 +10,27 @@
   <body>
 
   <div class="head_conteiner">
-      <ul class="head_ul">
-        <li>
-          E-mail: <%= current_user.email if current_user.email? %>
-        </li>
-        <li><a class="button" href="welcome.html">Головна</a></li>
-        <li><a class="button" href="from_me.html">Меню</a></li>
-        <li><a class="button" href="from_me.html">Про нас</a></li>
-        <li><a class="button" href="partner.html">Партнерство</a></li>
-        <li><a class="button" href="mk.html">Наші майстер класи</a></li>
-        <li>
-        <li>
+      <table class="head_table">
+      <tbody>
+      <tr>
+        <td><%= link_to "Главная", root_path %></td>
+        <td><%= link_to "Меню", products_path %></td>
+        <td><%= link_to "Про нас", welcome_about_company_path %></td>
+        <td><%= link_to "Партнерство", welcome_partners_path %></td>
+        <td><%= link_to "Наши мастер классы", welcome_mk_path %></td>
+
+        <td class="e-mail">
           <% if current_user %>
             <%= link_to "Выйти", destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to "Войти", new_user_session_path %>
           <% end %>
-        </li>
-        <li><strong>+38(099) 04 39 538</strong></li>
-      </ul>
+        </td>
+
+        <td class="e-mail"><%= link_to "E-mail: #{ current_user.email if current_user }" %></td>
+        </tr>
+      </tbody>
+      </table>
   </div>
 
 
@@ -39,22 +41,28 @@
     <%= yield %>
 
     <footer>
-      <div class="footer">
+    <table class="footer_table">
+    <tbody>
+    <tr>
+      <td>
         <span class="footer_head">ПЕКАРНЯ</span>
-        <p>Пекарня-кондитерська «Mary» гостинно запрошує скуштувати неймовірно смачну випічку та десерти.</p>
-      </div>
-      <div id="master">
+        <p class="footer_p"></p>Пекарня-кондитерська «Mary» гостинно запрошує скуштувати неймовірно смачну випічку та десерти.</p>
+      </td>
+      <td>
           <%= image_tag("img/master.jpg") %>
-      </div>
-      <div class="footer">
+      </td>
+      <td>
         <span class="footer_head">КОНТАКТНА ІНФОРМАЦІЯ</span>
-        <p>
+        <p class="footer_p">
         бульвар Лесі Українки 26, Київ, Україна
         +38 073 123 26 26
         <p></p>
         <span align="center" class="footer_head">master2009sales@gmail.com</span>
         </p>
-      </div>
+      </td>
+      </tr>
+      </tbody>
+      </table>
     </footer>
   </body>
 </html>

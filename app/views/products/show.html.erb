@@ -1,9 +1,10 @@
 <div id="header_img">
   <%= image_tag("img/design66.jpg") %>
 </div>
+
 <div>
   <div class="p" align="center">
-    <h4>Торт «Чізкейк чорничний»</h4>
+    <h4><%= @product.name if @product.name? %></h4>
   </div>
   <div class="p">
     <p>
@@ -13,12 +14,8 @@
   <div align="center">
     <%= image_tag @product.image.url(:large) if @product.image? %>
   </div>
-
-
 </div>
-<div class="button2" align="right">
-  <%= link_to 'Edit', edit_product_path(@product) %>
-</div>
+
 <div class="button2">
 <%= link_to 'Back', products_path %>
 </div>

@@ -1,0 +1,30 @@
+.index{
+  width: 30%;
+  height: 180px;
+  color: red;
+  text-align: center;
+  margin: auto;
+}
+.index table{
+  margin: auto;
+  color: red;
+  text-align: center;
+  margin: auto;
+  background: red;
+}
+.index img{
+  width: 104%;
+  height: 180px;
+  margin: -4px;
+  margin-left: -5px;
+  padding: -4px;
+  margin-left: -4px;
+}
+.index td{
+  padding-bottom: -1px;
+  margin-bottom: -1px;
+}
+.index img:hover{
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}

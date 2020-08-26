@@ -1,0 +1,26 @@
+<h1>Поиск</h1>
+
+<%= form_tag search_path, method: :get do %>
+
+  <p>
+  <h3>Поиск по категории:</h3>
+  <%= select_tag :category, options_from_collection_for_select(Product.categories.map{ |a| [a.first, a.first]}, :first, :second) %>
+  </p>
+
+  <p class="actions">
+    <%= submit_tag "Поиск" %>
+  </p>
+<% end %>
+
+<%= form_tag search_path, method: :get do %>
+
+  <p>
+  <h3>Поиск по названию:</h3>
+  <%= text_field_tag :name %>
+  </p>
+
+  <p class="actions">
+    <%= submit_tag "Поиск" %>
+  </p>
+<% end %>
+

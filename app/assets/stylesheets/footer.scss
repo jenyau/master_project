@@ -1,0 +1,30 @@
+footer{
+
+  height: 200px;
+  background: red;
+  opacity: .9;
+  color:white;
+  float: left;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.footer_table{
+  font-size: 1.5em;
+  text-align: center;
+}
+.footer_table td{
+  width: 450px;
+  height: 194px;
+}
+.footer_head{
+  padding-bottom: 5px;
+  border-bottom: 2px solid yellow;
+  text-overflow: scroll;
+}
+footer img{
+  float: center;
+
+  height: 200px;
+  padding: 0px;
+  margin: 0px;
+}

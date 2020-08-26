@@ -1,0 +1,22 @@
+<%= form_for [:admin, news], html: { multipart: true }  do |form| %>
+  <%= render 'common/errors', resource: news %>
+
+<p class="field">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</p>
+
+<p class="field">
+  <%= form.file_field :title_image %>
+</p>
+
+<p class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </p>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
