@@ -1,15 +1,13 @@
-<p id="notice"><%= notice %></p>
-<div id="header_img">
-<%= image_tag("img/news.png") %>
+ <div class="fixed-wrap">
+  <div id="fixed3"></div>
 </div>
-
-
-
-<div class="news">
-
-  <% if @news.empty? %>
+<br><br><br>
+<div class="container">
+  <div class="row">
+        <% if @news.empty? %>
     <h4>Пока нет новостей</h4>
   <% else %>
     <%= render @news %>
   <% end %>
+  </div>
 </div>

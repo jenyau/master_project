@@ -1,5 +1,11 @@
-<h1>New news</h1>
-
-<%= render 'form', news: @news %>
-
-<%= link_to 'Back', admin_news_index_path %>
+<h2 class="text-center">Добавить новость</h2>
+<div class="container">
+  <div class="row">
+    <br>
+    <%= render 'form', news: @news %>
+    <div class="col-xs-12 col-sm-12 text-center" id="btn-master">
+      <%= link_to "Назад", admin_news_index_path, :class=>"btn btn-light" %>
+    </div>
+  </div>
+</div>
+<br>

@@ -1,20 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7" id="newsDescription">
+      <h4 class="text-center"><%= @news.title if @news.title.present? %></h4>
+      <div>
+        <p class="lead"><%= @news.body %></p>
+      </div>
+      <div class="text-right" id="newsDataTime">
+        <p>Добавлена: <%= @news.created_at.strftime("%T %D") %></p>
+      </div>
+    <div class="col-xs-12 col-sm-12 padding text-center" id="btn-master">
+      <%= link_to 'Назад', news_index_path, :class=>"btn" %>
+    </div>
+  </div>
 
-<div class="news">
-  <h4><%= @news.title %></h4>
-
-<p id="created_at">
-  Добавлена:
-  <%= @news.created_at.strftime("%T %D") %>
-</p>
-
-<p>
-  <%= @news.body %>
-</p>
-
-<%= image_tag @news.title_image.url(:large) if @news.title_image?%>
-
+    <div class="col-md-5" id="newsShowImg">
+      <%= image_tag @news.title_image.url(:large) if @news.title_image? %>
+    </div>
+  </div>
 </div>
-
-<%= link_to 'Edit', edit_admin_news_path(@news) %>
-<%= link_to 'Back', news_index_path %>

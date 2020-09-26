@@ -1,22 +1,21 @@
 <%= form_for [:admin, news], html: { multipart: true }  do |form| %>
   <%= render 'common/errors', resource: news %>
-
-<p class="field">
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-</p>
-
-<p class="field">
-  <%= form.file_field :title_image %>
-</p>
-
-<p class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <p class="field">
+    <%= form.label :title, "Название" %><br>
+    <%= form.text_field :title %>
   </p>
-
-
+  <p class="field">
+    <%= form.file_field :title_image %>
+  </p>
+  <p class="field">
+      <%= form.label :body, "Введите текст" %>
+    <%= form.text_area :body,
+                    :rows => 13,
+                    :cols => 50 ,
+                    :maxlength => 240,
+                    :autocomplete => :off %>
+  </p>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Добавить", :class=>"btn btn-info" %>
   </div>
 <% end %>

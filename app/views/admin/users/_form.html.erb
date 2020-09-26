@@ -1,11 +1,11 @@
 <%= form_for [:admin, user] do |form| %>
   <%= render 'common/errors', resource: user %>
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <span><%= form.label :email %></span>
+    <%= form.text_field :email, :class=>"form-control" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Изменить", :class=>"btn btn-info" %>
   </div>
 <% end %>

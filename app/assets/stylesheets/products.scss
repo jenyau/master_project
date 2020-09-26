@@ -1,0 +1,44 @@
+#menuCard {
+  border: 1px solid red;
+  margin-bottom: 1em;
+  border-radius: 20px;
+}
+#menuCard img{
+  height: 200px;
+  border-bottom: 2px solid yellow;
+  border-radius: 20px 20px 0 0;
+}
+#menuCard h4 a{
+    padding: 6px;
+    color: red;
+    text-decoration: none;
+}
+#menuCard:hover{
+  box-shadow: -10px 10px 40px red;
+  border-left: 3px solid pink;
+  border-bottom: 4px solid pink;
+  background-color: #F5F5F5;
+  opacity: 0.9;
+  transition: 1.5s;
+}
+
+@media (max-width: 750px){
+#menuCard:hover{
+  box-shadow: none;
+  opacity: 1;
+  }
+}
+#productShowImg{
+  max-height: 400px;
+  margin-bottom: 2em;
+}
+#productShowImg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: -5px 10px 15px black;
+}
+#productDescription h4{
+  border-bottom: 3px solid yellow;
+}
+

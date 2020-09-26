@@ -1,0 +1,25 @@
+.btn-master-search{
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  font-size: .8em;
+  height: 25px;
+  border-radius: 8px;
+}
+.btn-master-search:hover {
+  background-color: red;
+  color: silver;
+  border: 1px solid fuchsia;
+  transition: .5s;
+}
+#btn-master a{
+  background-color: red;
+  color: white;
+  border: 1px solid yellow;
+  border-radius: 5px;
+}
+#btn-master a:hover{
+  color: silver;
+  border: 1px solid fuchsia;
+  transition: .5s;
+}

@@ -1,21 +1,16 @@
-<div id="header_img">
-  <%= image_tag("img/design66.jpg") %>
-</div>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-4" id="productDescription">
+      <h4><%= @product.name if @product.name? %></h4>
+      <p><%= @product.description if @product.description.present? %></p>
+    <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+      <%= link_to "Назад", products_path, :class=>"btn btn-light" %>
+    </div>
+    </div>
 
-<div>
-  <div class="p" align="center">
-    <h4><%= @product.name if @product.name? %></h4>
-  </div>
-  <div class="p">
-    <p>
-      <%= @product.description %>
-    </p>
-  </div>
-  <div align="center">
-    <%= image_tag @product.image.url(:large) if @product.image? %>
+    <div class="col-md-8" id="productShowImg">
+      <%= image_tag @product.image.url(:large) if @product.image? %>
+    </div>
   </div>
 </div>
 
-<div class="button2">
-<%= link_to 'Back', products_path %>
-</div>

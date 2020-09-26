@@ -1,30 +1,15 @@
-footer{
-
-  height: 200px;
-  background: red;
-  opacity: .9;
-  color:white;
-  float: left;
-  margin-top: 100px;
-  overflow: hidden;
+#footer{
+  background-color: red;
 }
-.footer_table{
-  font-size: 1.5em;
-  text-align: center;
+#footerImg img{
+  width: 100%;
+  height: 100%;
 }
-.footer_table td{
-  width: 450px;
-  height: 194px;
+footer p{
+  font-size: 1.3em;
 }
-.footer_head{
-  padding-bottom: 5px;
-  border-bottom: 2px solid yellow;
-  text-overflow: scroll;
-}
-footer img{
-  float: center;
-
-  height: 200px;
-  padding: 0px;
-  margin: 0px;
+@media (max-width: 750px){
+  footer p{
+    font-size: .7em;
+  }
 }

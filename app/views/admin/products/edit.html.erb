@@ -1,6 +1,12 @@
-<h1>Editing product</h1>
+<h2>Редактировать позицию</h2>
 
-<%= render 'form', product: @product %>
-
-<%= link_to 'Show', [:admin, @product] %> |
-<%= link_to 'Back', admin_products_path %>
+<div class="container">
+  <div class="row">
+    <br>
+    <%= render 'form', product: @product %>
+    <div class="col-xs-12 col-sm-12 text-center" id="btn-master">
+      <%= link_to "Назад", admin_products_path, :class=>"btn btn-light" %>
+    </div>
+  </div>
+</div>
+<br>

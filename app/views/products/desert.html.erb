@@ -1,0 +1,26 @@
+<div class="container-fluid" id="menuContainer">
+  <div class="row" >
+    <ul class="nav nav-tabs text-center justify-content-left bg-light" id="navTabs">
+      <li class="nav-item">
+        <%= link_to "Вся продукция", products_path, :class=>"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Торты", cake_products_path, :class=>"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Пирожные", desert_products_path, :class=>"nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Слойка", puff_product_products_path, :class=>"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Печенье", biscuits_products_path, :class=>"nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <%= render Product.all.desert %>
+  </div>
+</div>

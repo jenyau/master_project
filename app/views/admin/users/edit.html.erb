@@ -1,6 +1,11 @@
-<h1>Editing User</h1>
+<h2 class="text-center">Редактирование пользователя</h2>
+<div class="container">
+  <div class="row">
 
-<%= render 'form', user: @user %>
+    <%= render 'form', user: @user %>
 
-<%= link_to 'Show', [:admin, @user] %>
-<%= link_to 'Back', admin_users_path %>
+    <div class="col-xs-12 col-sm-12 padding text-center" id="btn-master">
+      <%= link_to "Назад", admin_users_path, :class=>"btn btn-light" %>
+    </div>
+  </div>
+</div>

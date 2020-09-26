@@ -1,4 +1,11 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+  validates :image, presence: true
+  validates :weight, presence: true
+  validates :description, presence: true
+  validates_length_of :name, :maximum => 40
+  validates_length_of :description, :maximum => 200
+  validates_length_of :weight, :maximum => 5
 
   mount_uploader :image, ImageUploader
 

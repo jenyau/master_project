@@ -1,32 +1,27 @@
-<div id="header_img">
-  <%= image_tag("img/design55.jpg") %>
-</div>
-    <div id="menu_header_img">
-      <%= image_tag("img/menu_front.jpg") %>
-    </div>
-
-    <% if @product.present? %>
-      <div class="menu">
+<div class="container">
+  <div class="row">
+    <% if @product %>
+      <div class="col-md-3" id="newsIndexImg">
         <%= image_tag @product.image.url(:menu_img) if @product.image? %>
       </div>
-      <div class="menu">
-        <h4><%= link_to "#{ @product.name }", product_path(@product) %></h4>
-        <%= @product.description %>
+      <div class="col-md-9" id="newsIndex">
+        <h4 class="text-center text-truncate"><%= link_to @product.name, product_path(@product) %></h4>
+        <p class="lead" id="news_index"><%= @product.description %></p>
+        <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+          <% if current_user.present? %>
+            <% if current_user.admin? %>
+              <%= link_to "Редактировать", edit_admin_product_path(@product), :class=>"btn btn-light" %>
+            <% end %>
+          <% end %>
+          <%= link_to "Посмотреть", product_path(@product), :class=>"btn btn-light" %>
+        </div>
       </div>
-    <% end %>
-
-    <% if @products.empty? && !@product.present? %>
-      <div class="menu">Нет результатов по вашему запросу</div>
     <% else %>
-      <% @products.each do |product| %>
-    <div class="menu">
-        <%= image_tag product.image.url(:menu_img) if product.image? %>
-    </div>
-    <div class="menu">
-        <h4><%= link_to "#{ product.name }", product_path(product) %></h4>
-        <%= product.description %>
-    </div>
+      <hr>
+        <div id="noResult">
+          <h4>Не найдено ни одной позици по Вашему запросу</h4>
+        </div>
+      <hr>
     <% end %>
-  <% end %>
-</p>
-
+  </div>
+</div>
