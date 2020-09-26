@@ -1,0 +1,6 @@
+<tr>
+  <td><%= news.title %></td>
+  <td><%= link_to 'Показать', [:admin, news] %></td>
+  <td><%= link_to 'Редактировать', edit_admin_news_path(news) %></td>
+  <td><%= link_to 'Удалить', [:admin, news], method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+</tr>

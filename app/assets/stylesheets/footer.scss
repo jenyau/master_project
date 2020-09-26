@@ -1,0 +1,15 @@
+#footer{
+  background-color: red;
+}
+#footerImg img{
+  width: 100%;
+  height: 100%;
+}
+footer p{
+  font-size: 1.3em;
+}
+@media (max-width: 750px){
+  footer p{
+    font-size: .7em;
+  }
+}

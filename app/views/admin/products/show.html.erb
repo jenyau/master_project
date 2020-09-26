@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-4" id="productDescription">
+      <h4><%= @product.name if @product.name? %></h4>
+      <p><%= @product.description if @product.description.present? %></p>
+      <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+        <%= link_to "Редактировать", edit_admin_product_path(@product), :class=>"btn btn-light" %>
+      </div>
+      <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+        <%= link_to "Назад", admin_products_path, :class=>"btn btn-light" %>
+      </div>
+    </div>
+
+    <div class="col-md-8" id="productShowImg">
+      <%= image_tag @product.image.url(:large) if @product.image? %>
+    </div>
+  </div>
+</div>
+

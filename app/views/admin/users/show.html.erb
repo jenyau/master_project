@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row text-center">
+    <h4>Личный кабинет пользователя: <%="#{@user.email}" %></h4>
+    <div class="col-md-6 text-left">
+    <h5>Почта:</h5>
+    <p>E-mail: <%= @user.email %></p>
+    </div>
+    <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+      <%= link_to "Редактировать", edit_admin_user_path(@user), :class=>"btn btn-light" %>
+    </div>
+    <div class="col-xs-12 col-sm-12 padding" id="btn-master">
+      <%= link_to "Назад", admin_users_path, :class=>"btn btn-light" %>
+    </div>
+  </div>
+</div>

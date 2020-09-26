@@ -1,0 +1,31 @@
+
+#newsDescription h4{
+  border-bottom: 3px solid yellow;
+}
+#newsShowImg{
+  max-height: 400px;
+  margin-bottom: 2em;
+}
+#newsShowImg img{
+  width: 100%;
+  height: 100%;
+}
+#newsDataTime{
+  font-size: .6em;
+}
+#newsIndex h4{
+  border-bottom: 3px solid yellow;
+}
+#newsIndexImg{
+  margin-bottom: 2em;
+  height: 200px;
+}
+#newsIndexImg img{
+  width: 100%;
+  height: 100%;
+}
+#newsIndex a{
+  color: red;
+  text-decoration: none;
+  font-size: 1.5em;
+}

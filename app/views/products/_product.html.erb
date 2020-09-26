@@ -1,6 +1,12 @@
-<tr>
-  <td><%= product.name %></td>
-  <td><%= link_to 'Show', product %></td>
-  <td><%= link_to 'Edit', edit_product_path(product) %></td>
-  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+<div class="col-md-3">
+  <div class="card" id="menuCard">
+    <%= image_tag product.image.url(:menu_img) if product.image? %>
+    <div class="card-body">
+      <h4 class="card-title text-truncate"><%= link_to "#{product.name}", product_path(product) %></h4>
+      <p class="card-text text-truncate"><%= product.description %></p>
+      <div id="btn-master">
+        <%= link_to "Посмотреть", product_path(product), :class=>"btn"%>
+      </div>
+    </div>
+  </div>
+</div>

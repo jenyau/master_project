@@ -1,0 +1,31 @@
+<%= form_for [:admin, product], html: { multipart: true } do |form| %>
+  <%= render 'common/errors', resource: product %>
+  <div class="field">
+    <%= form.label :name, "Название" %><br>
+    <%= form.text_field :name %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :weight, "Вес" %><br>
+    <%= form.text_field :weight %>
+  </div>
+  <br>
+  <p>
+    <%= form.label :category, "Категория" %><br>
+    <%= form.collection_select :category  , Product.categories.map{ |a| [a.first, a.first]}, :first, :second %>
+  </p>
+  <p class="field">
+    <%= form.file_field :image %>
+  </p>
+  <div class="field">
+    <%= form.label :description, "Описание" %>
+    <%= form.text_area :description,
+                  :rows => 13,
+                  :cols => 50 ,
+                  :maxlength => 240,
+                  :autocomplete => :off %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Создать", :class=>"btn btn-info" %>
+  </div>
+<% end %>

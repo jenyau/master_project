@@ -1,0 +1,11 @@
+<h2 class="text-center">Редактирование пользователя</h2>
+<div class="container">
+  <div class="row">
+
+    <%= render 'form', user: @user %>
+
+    <div class="col-xs-12 col-sm-12 padding text-center" id="btn-master">
+      <%= link_to "Назад", admin_users_path, :class=>"btn btn-light" %>
+    </div>
+  </div>
+</div>
