@@ -173,9 +173,11 @@ strong{
   color: white;
   transition: 1.5s;
 }
-@media (max-width: 900px){
+@media (max-width: 1000px){
   .carousel-caption-text{
     opacity: 1;
+    text-shadow: 1px 1px 10px red;
+
   }
   .carousel-caption-text a{
     font-size: 1.3em;
