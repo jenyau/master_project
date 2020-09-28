@@ -24,12 +24,14 @@ gem 'jbuilder', '~> 2.7'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem 'devise'
-gem 'bootstrap'
+gem 'mini_racer'
+gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'popper_js'
-gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap-sass'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
+gem 'rails_12factor'
 
 
 # Use Active Storage variant
