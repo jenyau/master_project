@@ -139,15 +139,20 @@ strong{
     font-size: 1.8em;
   }
   #carousel4 {
-    border: none;
+    border: 2px solid red;
   }
 }
-@media (max-width: 600px){
+@media (max-width: 750px){
   #carouselImg h3{
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
 }
 
+@media (max-width: 500px){
+  #carouselImg h3{
+    font-size: 1em;
+  }
+}
 
 .carousel-caption-text{
   width: 90%;
