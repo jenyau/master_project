@@ -32,6 +32,7 @@ gem 'bootstrap-sass'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem 'rails_12factor'
+gem 'pg_search'
 
 
 # Use Active Storage variant

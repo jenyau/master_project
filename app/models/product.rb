@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :search_name, against: :name
+
   validates :name, presence: true
   validates :image, presence: true
   validates :weight, presence: true
