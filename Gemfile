@@ -33,6 +33,7 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 gem 'rails_12factor'
 gem 'pg_search'
+gem 'kaminari'
 
 
 # Use Active Storage variant

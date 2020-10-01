@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_name, against: :name
 
+  paginates_per 16
+
   validates :name, presence: true
   validates :image, presence: true
   validates :weight, presence: true
