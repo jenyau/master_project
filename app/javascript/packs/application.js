@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap'
+import "bootstrap-sprockets"
 
 
 
@@ -22,3 +23,9 @@ import 'bootstrap'
 //= require popper
 //= require jquery
 //= require bootstrap-sprockets
+
+//= require turbolinks
+//= require rails-ujs
+//= require polyfill
+//= require bootstrap-native
+//= require bootstrap-native-turbolinks
