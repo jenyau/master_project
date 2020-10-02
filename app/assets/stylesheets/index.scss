@@ -14,3 +14,9 @@ body hr{
   margin: 2em 0px 4em 0px;
   border-top: 3px solid yellow;
 }
+#navbarTogglerDemo01 a:hover{
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  transition: .5s;
+}

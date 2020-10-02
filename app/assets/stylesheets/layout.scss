@@ -15,12 +15,6 @@
   background-color: red;
   border-radius: 5px;
 }
-#navbarTogglerDemo01 a:hover{
-  color: white;
-  background-color: red;
-  border-radius: 5px;
-  transition: .5s;
-}
 #e-mail a{
   font-size: 1.1em;
   color: blue;
@@ -68,6 +62,18 @@ body h4{
   border-bottom: 3px solid red;
 }
 
+@media (max-width: 750px){
+  body h2{
+    font-size: 1.5em;
+  }
+  body h4{
+    font-size: 1.2em;
+  }
+  body p{
+    font-size: .7em;
+  }
+}
+
 strong{
   color: red;
 }
@@ -85,6 +91,11 @@ strong{
 }
 .carousel-inner img{
   height: 100%;
+}
+@media (min-width: 1100px){
+  .carousel-inner img {
+    width: 100%;
+  }
 }
 .carousel-caption{
   color: white;
@@ -123,6 +134,25 @@ strong{
   font-size: 2em;
   opacity: .9;
 }
+@media (max-width: 1000px){
+  #carouselImg h3{
+    font-size: 1.8em;
+  }
+  #carousel4 {
+    border: none;
+  }
+}
+@media (max-width: 750px){
+  #carouselImg h3{
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 500px){
+  #carouselImg h3{
+    font-size: 1em;
+  }
+}
 
 .carousel-caption-text{
   width: 90%;
@@ -147,6 +177,16 @@ strong{
   text-decoration: none;
   color: white;
   transition: 1.5s;
+}
+@media (max-width: 1000px){
+  .carousel-caption-text{
+    opacity: 1;
+    text-shadow: 1px 1px 10px red;
+
+  }
+  .carousel-caption-text a{
+    font-size: 1.3em;
+  }
 }
 #rootMenu{
   margin-bottom: .8em;
@@ -230,6 +270,11 @@ strong{
   -o-background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
+}
+@media (max-width: 750px) {
+  .display-4{
+    font-size: 1em;
+  }
 }
 
 

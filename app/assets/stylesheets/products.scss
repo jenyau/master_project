@@ -21,6 +21,13 @@
   opacity: 0.9;
   transition: 1.5s;
 }
+
+@media (max-width: 750px){
+#menuCard:hover{
+  box-shadow: none;
+  opacity: 1;
+  }
+}
 #productShowImg{
   max-height: 400px;
   margin-bottom: 2em;
@@ -34,3 +41,4 @@
 #productDescription h4{
   border-bottom: 3px solid yellow;
 }
+
