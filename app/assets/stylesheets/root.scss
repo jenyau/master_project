@@ -1,0 +1,77 @@
+.newsRoot{
+  font-size: 1em;
+  padding: 1em;
+  border-radius: 0;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+.newsRoot h2, h4{
+  color: red;
+}
+body hr{
+  margin: 2em 0px 4em 0px;
+  border-top: 3px solid yellow;
+}
+#rootMenu{
+  margin-bottom: .8em;
+}
+#rootMenu img{
+  width:100%;
+  height: 100%;
+}
+#rootMenu:hover img{
+  border-left: 3px solid pink;
+  border-bottom: 4px solid pink;
+  box-shadow: -10px 10px 40px red;
+  opacity: .9;
+  transition: 2s;
+}
+
+.root-menu-text{
+  width: 90%;
+  height: 50%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 25%;
+  opacity: 0;
+ }
+.root-menu-text:hover{
+  opacity: 1;
+  text-shadow: 1px 1px 10px red;
+}
+.root-menu-text a{
+  display: block;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+}
+.root-menu-text a:hover{
+  text-decoration: none;
+  color: white;
+  transition: 1.5s;
+}
+#partner{
+  margin: 2em 1em;
+}
+#partner p{
+  color: white;
+  font-size: 1.3em;
+}
+#cardBox{
+  margin-bottom: 2em;
+  border-radius: 20px;
+}
+#cardBox img{
+  height: 250px;
+}
+#cardBox:hover{
+  box-shadow: -10px 10px 40px red;
+  border-left: 3px solid pink;
+  border-bottom: 4px solid pink;
+  background-color: #F5F5F5;
+  opacity: 0.9;
+  transition: 2s;
+}

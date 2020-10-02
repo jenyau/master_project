@@ -35,7 +35,7 @@ class Admin::NewsController < Admin::BaseController
 
   def destroy
     @news.destroy
-    redirect_to admin_news_path
+    redirect_to admin_news_index_path
   end
 
   private
