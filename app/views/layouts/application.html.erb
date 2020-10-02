@@ -18,7 +18,15 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <%= link_to "Главная", root_path, :class=>"nav-link" %>
+              <% if current_user %>
+                <% if current_user.admin? %>
+                  <%= link_to "Администратор", admin_products_path, :class=>"nav-link" %>
+                <% else %>
+                  <%= link_to "Главная", root_path, :class=>"nav-link" %>
+                <% end %>
+              <% else %>
+                <%= link_to "Главная", root_path, :class=>"nav-link" %>
+              <% end %>
             </li>
             <li class="nav-item">
               <%= link_to "Каталог", products_path, :class=>"nav-link" %>
@@ -45,7 +53,7 @@
           </ul>
           <div class="text-right">
             <%= form_tag search_path, method: :get do %>
-              <%= text_field_tag :name, "", :class=>"search_panel2" %>
+              <%= text_field_tag :name, "", :class=>"search_panel" %>
               <%= submit_tag "Поиск", :class=>"btn-master-search" %>
             <% end %>
           </div>
@@ -54,55 +62,54 @@
       </div>
     </div>
   </div>
+  <div class="carousel slide" data-ride="carousel" id="slides">
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+      <li data-target="#slides" data-slide-to="3"></li>
+      <li data-target="#slides" data-slide-to="4"></li>
+    </ul>
 
-    <div class="carousel slide" data-ride="carousel" id="slides">
-      <ul class="carousel-indicators">
-        <li data-target="#slides" data-slide-to="0" class="active"></li>
-        <li data-target="#slides" data-slide-to="1"></li>
-        <li data-target="#slides" data-slide-to="2"></li>
-        <li data-target="#slides" data-slide-to="3"></li>
-        <li data-target="#slides" data-slide-to="4"></li>
-      </ul>
-
-      <div class="carousel-inner" id="carouselDiv">
-        <div class="carousel-item active text-center" id="carouselImg2">
-          <%= image_tag("img/master_head2.jpg") %>
-        </div>
-        <div class="carousel-item" id="carouselImg">
-          <%= image_tag("img/berry152.jpg") %>
-           <div class="carousel-caption" id=carousel2>
-            <h3>Начинки продукции "ТМ Мастер" делаются только из свежих и натуральных ягод и фруктов</h3>
-          </div>
-        </div>
-        <div class="carousel-item" id="carouselImg">
-          <%= image_tag("img/muka82.jpg") %>
-          <div class="carousel-caption3">
-            <div class="container">
-              <h3>Компания <strong>Мастер</strong> использует только высококачественное сырье лучших сертифицированых
-                Украинских производителей. Качество входящей продукции прходит контроль на всех этапах -
-                от получения сырья до хранения продукта на складе.</h3>
-            </div>
-          </div>
-
-        </div>
-        <div class="carousel-item" id="carouselImg">
-          <%= image_tag("img/povar.jpg") %>
-            <div class="carousel-caption3 text-center" id="carousel4">
-              <h3>
-                Кондитеры, технологи, пекари, упаковщики - это команда профессионалов,
-                в которой каждый тщательно выполняет свою работу.
-              </h3>
-            </div>
-
-        </div>
-        <div class="carousel-item" id="carouselImg">
-          <%= image_tag("img/zlaki2.jpg") %>
-            <div class="carousel-caption">
-              <h3>Для приготовления Грильяжа, мы используем только отборные злаки</h3>
-            </div>
+    <div class="carousel-inner" id="carouselDiv">
+      <div class="carousel-item active text-center" id="carouselImg2">
+        <%= image_tag("img/master_head2.jpg") %>
+      </div>
+      <div class="carousel-item" id="carouselImg">
+        <%= image_tag("img/berry152.jpg") %>
+          <div class="carousel-caption" id=carousel2>
+          <h3>Начинки продукции "ТМ Мастер" делаются только из свежих и натуральных ягод и фруктов</h3>
         </div>
       </div>
+      <div class="carousel-item" id="carouselImg">
+        <%= image_tag("img/muka82.jpg") %>
+        <div class="carousel-caption3">
+          <div class="container">
+            <h3>Компания <strong>Мастер</strong> использует только высококачественное сырье лучших сертифицированых
+              Украинских производителей. Качество входящей продукции прходит контроль на всех этапах -
+              от получения сырья до хранения продукта на складе.</h3>
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-item" id="carouselImg">
+        <%= image_tag("img/povar.jpg") %>
+          <div class="carousel-caption3 text-center" id="carousel4">
+            <h3>
+              Кондитеры, технологи, пекари, упаковщики - это команда профессионалов,
+              в которой каждый тщательно выполняет свою работу.
+            </h3>
+          </div>
+
+      </div>
+      <div class="carousel-item" id="carouselImg">
+        <%= image_tag("img/zlaki2.jpg") %>
+          <div class="carousel-caption">
+            <h3>Для приготовления Грильяжа, мы используем только отборные злаки</h3>
+          </div>
+      </div>
     </div>
+  </div>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
