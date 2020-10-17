@@ -65,11 +65,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :menu_img do
-    process resize_to_fit: [315, 250]
+    process resize_to_fit: [200, 200]
   end
 
   version :large do
-    process resize_to_fit: [500, 400]
+    process resize_to_fit: [400, 400]
   end
 
   def extension_whitelist
