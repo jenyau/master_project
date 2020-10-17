@@ -34,7 +34,7 @@ gem 'jquery-rails'
 gem 'rails_12factor'
 gem 'pg_search'
 gem 'kaminari'
-
+gem 'cloudinary'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

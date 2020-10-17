@@ -53,3 +53,26 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 end
+class ImageUploader < CarrierWave::Uploader::Base
+
+  include Cloudinary::CarrierWave
+
+  process :convert => 'png'
+  process :tags => ['post_picture']
+
+  version :thumb do
+    process resize_to_fit: [200, 200]
+  end
+
+  version :menu_img do
+    process resize_to_fit: [315, 250]
+  end
+
+  version :large do
+    process resize_to_fit: [500, 400]
+  end
+
+  def extension_whitelist
+    %w(jpg jpeg gif png)
+  end
+end
