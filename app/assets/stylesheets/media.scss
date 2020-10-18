@@ -33,7 +33,12 @@
     font-size: .7em;
   }
 }
-@media (max-width: 1000px){
+@media (max-width: 950px) {
+  #navbarTogglerDemo01 a{
+    font-size: 1.5em
+  }
+}
+  @media (max-width: 1000px){
   #carouselImg h3{
     font-size: 1.6em;
   }
