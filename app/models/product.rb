@@ -1,3 +1,12 @@
+# t.string "weight"
+# t.integer "category", default: 0
+# t.datetime "created_at", precision: 6, null: false
+# t.datetime "updated_at", precision: 6, null: false
+# t.string "image"
+# t.text "description"
+
+
+
 class Product < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_name, against: :name

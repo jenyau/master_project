@@ -17,6 +17,7 @@ class Admin::ProductsController < Admin::BaseController
 
     if @product.save
       redirect_to [:admin, @product]
+      ProductMailer.new_product(@product).deliver_now
     else
       render :new
     end
