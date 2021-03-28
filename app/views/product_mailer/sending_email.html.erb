@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4" id="productDescription">
+          <h4><%= @product.name if @product.name? %></h4>
+          <p><%= @product.description if @product.description.present? %></p>
+        </div>
+
+        <div class="col-md-8" id="productShowImg">
+          <%= image_tag @product.image.url(:large) if @product.image? %>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

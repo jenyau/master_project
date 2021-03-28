@@ -1,4 +1,6 @@
 class News < ApplicationRecord
+  paginates_per 10
+
   validates :title, presence: true
   validates :body, presence: true
   validates_length_of :title, :maximum => 60

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   namespace :admin do
     root :to=> "welcome#contacts"
     resources :products
@@ -22,5 +24,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/contacts'
   get 'welcome/about_company'
+  post 'sending_email' => 'product_mailer#sending_email', as: :sending_email
 
 end

@@ -16,9 +16,11 @@ class Admin::ProductsController < Admin::BaseController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to [:admin, @product]
-      ProductMailer.new_product(@product).deliver_now
+      status_notification = SendingOfLetters.new(@product).call
+      notification(status_notification)
+        redirect_to [:admin, @product]
     else
+      flash[:alert] = 'Произошла ошибка, запись не создана'
       render :new
     end
   end
@@ -28,18 +30,26 @@ class Admin::ProductsController < Admin::BaseController
 
   def update
     if @product.update(product_params)
+      flash[:notice] = 'Запись успешно обновлена'
       redirect_to [:admin, @product]
     else
+      flash[:error] = 'Произошла ошибка, запись не обновлена'
       render :edit
     end
   end
 
   def destroy
     @product.destroy
+    flash[:notice] = 'Запись успешно удалена'
     redirect_to admin_products_path
   end
 
   private
+
+  def notification(status)
+    status ? flash[:notice] = 'Рассылка выполнена' : flash[:error] = 'Произошла ошибка, почта не отправлены'
+  end
+
   def set_product
     @product = Product.find(params[:id])
   end
