@@ -1,9 +1,13 @@
+<br><br>
 <div class="container">
   <div class="row text-center">
-    <h4>Личный кабинет пользователя: <%="#{@user.email}" %></h4>
+    <h4>Кабинет пользователя: <%= @user.email %></h4>
     <div class="col-md-6 text-left">
-    <h5>Почта:</h5>
-    <p>E-mail: <%= @user.email %></p>
+      <h5>Имя:</h5>
+      <p><%= @user.name %></p>
+      <h5>Email:</h5>
+      <p><%= @user.email %></p>
+      <h5><%= @user.mailing_status ? 'Учавствует в рассылке' : 'Не учавствует в рассылке' %></h5>
     </div>
     <div class="col-xs-12 col-sm-12 padding" id="btn-master">
       <%= link_to "Редактировать", edit_admin_user_path(@user), :class=>"btn btn-light" %>

@@ -1,7 +1,10 @@
 class Admin::UsersController < Admin::BaseController
-  before_action :set_user, only: [:show, :edit, :destroy]
+
+  skip_before_action :verify_authenticity_token
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :update_mailing_status]
+
   def index
-    @users = User.all
+    @users = User.order('mailing_status ASC, email ASC')
   end
 
   def show
@@ -37,12 +40,18 @@ class Admin::UsersController < Admin::BaseController
     redirect_to admin_users_path
   end
 
+  def update_mailing_status
+    @user.update(mailing_status: params[:mailing_status])
+  end
+
   private
+
   def set_user
     @user = User.find(params[:id])
   end
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :id, :email, :mailing_status)
   end
+
 end

@@ -15,5 +15,6 @@
     <div class="col-xs-12 col-sm-12 padding">
       <%= link_to "Добавить новость", new_admin_news_path, :class=>"btn btn-info" %>
     </div>
+    <%= paginate @news %>
   </div>
 </div>
