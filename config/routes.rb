@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     root :to=> "welcome#contacts"
     resources :products
     resources :news
-    resources :users
+    resources :users do
+      patch 'update_mailing_status' => 'users#update_mailing_status'
+    end
+
   end
 
   resources :products, only: [:show, :index] do

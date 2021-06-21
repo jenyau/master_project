@@ -14,7 +14,7 @@ class SendingOfLetters
   private
 
   def get_emails
-    User.where(admin: false).pluck(:email)
+    User.where(mailing_status: true).pluck(:email)
   end
 
   def product_or_news_send_email

@@ -1,10 +1,22 @@
 <%= form_for [:admin, user] do |form| %>
   <%= render 'common/errors', resource: user %>
-  <div class="field">
+
+  <div>
+    <span><%= form.label :name %></span>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div>
     <span><%= form.label :email %></span>
     <%= form.text_field :email, :class=>"form-control" %>
   </div>
   <br>
+  <h4>Добавить в список рассылки</h4>
+  <label class="switch">
+    <%= form.check_box :mailing_status %>
+    <span class="slider round"></span>
+  </label>
+  <br><br>
   <div class="actions">
     <%= form.submit "Изменить", :class=>"btn btn-info" %>
   </div>

@@ -16,9 +16,10 @@ class Admin::NewsController < Admin::BaseController
     @news = News.new(news_params)
 
     if @news.save
-      status_notification = SendingOfLetters.new(@news).call
-      notification(status_notification)
+      flash[:notice] = 'Успешно создана'
       redirect_to [:admin, @news]
+      # status_notification = SendingOfLetters.new(@news).call
+      # notification(status_notification)
     else
       flash[:error] = 'Произошла ошибка, запись не создана'
       render :new

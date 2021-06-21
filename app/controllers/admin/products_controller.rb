@@ -16,9 +16,10 @@ class Admin::ProductsController < Admin::BaseController
     @product = Product.new(product_params)
 
     if @product.save
-      status_notification = SendingOfLetters.new(@product).call
-      notification(status_notification)
-        redirect_to [:admin, @product]
+      flash[:notice] = 'Создана новая позиция'
+      redirect_to [:admin, @product]
+      # status_notification = SendingOfLetters.new(@product).call
+      # notification(status_notification)
     else
       flash[:alert] = 'Произошла ошибка, запись не создана'
       render :new
