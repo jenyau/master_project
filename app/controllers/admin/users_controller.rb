@@ -4,7 +4,7 @@ class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: [:show, :edit, :update, :destroy, :update_mailing_status]
 
   def index
-    @users = User.order('mailing_status ASC, email ASC')
+    index_users_list
   end
 
   def show
@@ -42,9 +42,19 @@ class Admin::UsersController < Admin::BaseController
 
   def update_mailing_status
     @user.update(mailing_status: params[:mailing_status])
+    index_users_list
+
+    respond_to do |format|
+      format.html { render template: 'admin/users/update_mailing_status', locals: { users: @users } }
+    end
   end
 
   private
+
+  def index_users_list
+    @users = User.order('mailing_status ASC, email ASC')
+  end
+
 
   def set_user
     @user = User.find(params[:id])
